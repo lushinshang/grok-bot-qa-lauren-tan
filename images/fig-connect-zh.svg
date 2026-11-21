@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>bot 接進工作的各項功能與依據</title>
+<desc>中間是 bot，連到七項功能，每項標示依據與影片時間。官方文件有：會議（Google Meet、Zoom、Teams，0:57）、信箱 mail.grokbot.com（7:50）、電話僅限美國（7:55）、Slack 與 Teams 團隊 bot（15:48）；合作方頁面有：Tailscale 私有網路（10:31）；文件有出入：Slack 裡 bot 互相交棒（16:12）；只有講者與媒體說：iMessage（15:11）。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="1000" height="420" fill="#fbfaf7"/>
+<rect x="430" y="170" width="140" height="70" rx="14" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1"/>
+<text x="500" y="214" font-size="26" fill="#ffffff" font-weight="bold" text-anchor="middle">bot</text>
+<rect x="30" y="24" width="340" height="80" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="44" y="46" font-size="12" fill="#555555" text-anchor="start">0:57</text>
+<text x="200.0" y="68.0" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">會議（Google Meet、Zoom、Teams）</text>
+<text x="200.0" y="92" font-size="14" fill="#4f8a5b" font-weight="bold" text-anchor="middle">文件有</text>
+<path d="M372 64 L428 205" stroke="#444" stroke-width="2" fill="none"/>
+<rect x="30" y="120" width="340" height="80" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="44" y="142" font-size="12" fill="#555555" text-anchor="start">7:50</text>
+<text x="200.0" y="164.0" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">信箱（mail.grokbot.com）</text>
+<text x="200.0" y="188" font-size="14" fill="#4f8a5b" font-weight="bold" text-anchor="middle">文件有</text>
+<path d="M372 160 L428 205" stroke="#444" stroke-width="2" fill="none"/>
+<rect x="30" y="216" width="340" height="80" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="44" y="238" font-size="12" fill="#555555" text-anchor="start">7:55</text>
+<text x="200.0" y="260.0" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">電話（僅限美國）</text>
+<text x="200.0" y="284" font-size="14" fill="#4f8a5b" font-weight="bold" text-anchor="middle">文件有</text>
+<path d="M372 256 L428 205" stroke="#444" stroke-width="2" fill="none"/>
+<rect x="30" y="312" width="340" height="80" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="44" y="334" font-size="12" fill="#555555" text-anchor="start">10:31</text>
+<text x="200.0" y="356.0" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">Tailscale 私有網路</text>
+<text x="200.0" y="380" font-size="14" fill="#4f8a5b" font-weight="bold" text-anchor="middle">合作方頁面有</text>
+<path d="M372 352 L428 205" stroke="#444" stroke-width="2" fill="none"/>
+<rect x="630" y="56" width="340" height="80" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="644" y="78" font-size="12" fill="#555555" text-anchor="start">15:48</text>
+<text x="800.0" y="100.0" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">Slack、Teams 團隊 bot</text>
+<text x="800.0" y="124" font-size="14" fill="#4f8a5b" font-weight="bold" text-anchor="middle">文件有</text>
+<path d="M628 96 L572 205" stroke="#444" stroke-width="2" fill="none"/>
+<rect x="630" y="168" width="340" height="80" rx="8" fill="#ffffff" stroke="#d9822b" stroke-width="2.5"/>
+<text x="644" y="190" font-size="12" fill="#555555" text-anchor="start">16:12</text>
+<text x="800.0" y="212.0" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">Slack 裡 bot 互相交棒</text>
+<text x="800.0" y="236" font-size="14" fill="#d9822b" font-weight="bold" text-anchor="middle">文件有出入</text>
+<path d="M628 208 L572 205" stroke="#444" stroke-width="2" fill="none"/>
+<rect x="630" y="280" width="340" height="80" rx="8" fill="#ffffff" stroke="#777777" stroke-width="2.5"/>
+<text x="644" y="302" font-size="12" fill="#555555" text-anchor="start">15:11</text>
+<text x="800.0" y="324.0" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">iMessage</text>
+<text x="800.0" y="348" font-size="14" fill="#777777" font-weight="bold" text-anchor="middle">只有講者與媒體說</text>
+<path d="M628 320 L572 205" stroke="#444" stroke-width="2" fill="none"/>
+</svg>

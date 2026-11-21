@@ -15,7 +15,7 @@ Matt Palmer 與 Lauren Tan 的 86 分鐘直播問答（X 直播日 2026-11-13，
 | `share_post.md` | 社群分享文 |
 | `player.html` | 中英雙語字幕同步播放器 |
 | `translation-zh.html` | 全文繁中譯文（非官方） |
-| `images/` | 封面（hero，含手機版與 og-hero.jpg 預覽圖）與 2 張圖解（用量、bot 編制，皆含手機版） |
+| `images/` | 封面（hero，含手機版與 og-hero.jpg 預覽圖）與 4 張圖解（用量、bot 編制、Vault 看得到與看不到什麼、功能依據，皆含手機版） |
 
 ## 原始資料
 

@@ -142,6 +142,9 @@ Lauren 的路徑相近。她一開始想開 50 個，後來發現管理它們本
 
 **家用與區網。** 一則轉述：有人用 Tailscale 整合，在家中的 Plex 媒體伺服器上，每晚替孩子排睡前歌單（[10:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=631s)、[10:52](https://www.youtube.com/watch?v=doLKqG8TefU&t=652s)）。Tailscale 官方部落格確認 Grok Bot 可連到 tailnet（Tailscale 的私有網路）上的私有 MCP server〔一手〕。一位講者的通則是：只要裝置能接上區網，就叫 bot 自己去摸索（[55:04](https://www.youtube.com/watch?v=doLKqG8TefU&t=3304s)、[55:19](https://www.youtube.com/watch?v=doLKqG8TefU&t=3319s)、[55:37](https://www.youtube.com/watch?v=doLKqG8TefU&t=3337s)）；他還說自己想做一個專案：把熱感收據印表機接上區網，讓 bot 每次送出程式碼修改就印一張（還沒做）（[55:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=3331s)、[55:46](https://www.youtube.com/watch?v=doLKqG8TefU&t=3346s)）；觀眾則問能不能控制 CNC（電腦控制的切削）機台（[54:56](https://www.youtube.com/watch?v=doLKqG8TefU&t=3296s)）。Lauren 舉她的 Elgato 補光燈為例：電腦偵測到鏡頭啟動，就用腳本開燈，bot 自己在 Wi-Fi 上找到那些裝置並呼叫它們的程式介面（API）（[55:59](https://www.youtube.com/watch?v=doLKqG8TefU&t=3359s)、[56:15](https://www.youtube.com/watch?v=doLKqG8TefU&t=3375s)、[59:53](https://www.youtube.com/watch?v=doLKqG8TefU&t=3593s)）。
 
+![圖：bot 接進工作的七項功能與依據。官方文件有：會議（Google Meet、Zoom、Teams）、信箱 mail.grokbot.com、電話（僅限美國）、Slack 與 Teams 團隊 bot；合作方頁面有：Tailscale 私有網路；文件有出入：Slack 裡 bot 互相交棒；只有講者與媒體說：iMessage](images/fig-connect-zh.svg)
+*圖說：各項功能的依據；「文件有」指 docs.x.ai 對應頁面有寫。*
+
 ## 他們點名的反模式與主張
 
 **別只當聊天機器人。** 一位講者說，聊天機器人是大語言模型的第一版，只有文字；Grok Bot 是 AI 隊友，要接工具、排 routine、放進 Slack 與會議（[36:01](https://www.youtube.com/watch?v=doLKqG8TefU&t=2161s)、[36:12](https://www.youtube.com/watch?v=doLKqG8TefU&t=2172s)）。講者描述的「野心」包含：叫 bot 訂午餐、冰箱快沒了就補貨（[32:21](https://www.youtube.com/watch?v=doLKqG8TefU&t=1941s)、[32:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=1951s)），或是更正經的，同步更新 Notion 文件、Slack 通知與程式碼，再派 Cursor Cloud Agent 去改（[29:53](https://www.youtube.com/watch?v=doLKqG8TefU&t=1793s)、[30:22](https://www.youtube.com/watch?v=doLKqG8TefU&t=1822s)）。
@@ -172,6 +175,9 @@ Lauren 的路徑相近。她一開始想開 50 個，後來發現管理它們本
 ## 信任：密碼、備份與外部帳號
 
 被問到「什麼可以交給 bot」，Matt 說：Grok Bot 提供安全的輸入管道，bot 永遠看不到密碼；所以放得進密碼管理器的東西，都可以放心交給它（[1:04:26](https://www.youtube.com/watch?v=doLKqG8TefU&t=3866s)、[1:04:34](https://www.youtube.com/watch?v=doLKqG8TefU&t=3874s)）。他另一個提醒是，**絕不要把敏感資訊貼進聊天框**（[1:04:57](https://www.youtube.com/watch?v=doLKqG8TefU&t=3897s)）。官方文件同樣寫 bot 看不到儲存的密碼，也寫不要把密碼、一次性驗證碼或 API 金鑰貼在一般聊天裡〔一手〕。Vault（Grok Bot 存放密碼與信用卡資料的保險箱）的範圍和他的說法有出入，見文末對照。
+
+![圖：講者說放得進密碼管理器的東西都可以放心交給 bot；官方文件寫 bot 看不到已存的密碼與安全輸入表單的內容，但在 app 聊天中看得到已存信用卡的卡號與安全碼和聯絡資料；Vault 全帳號共用，不能限定給某個 bot；不要把密碼、一次性驗證碼、API 金鑰貼進一般聊天](images/fig-trust-zh.svg)
+*圖說：講者的說法與官方 Vault 文件的對照。*
 
 **備份。** 有人問 bot 的電腦怎麼備份。直播中有人建議：用完即丟的東西留在 bot 的電腦；要保存的，備份到 GitHub、Google Drive、Dropbox（[1:03:41](https://www.youtube.com/watch?v=doLKqG8TefU&t=3821s)、[1:03:46](https://www.youtube.com/watch?v=doLKqG8TefU&t=3826s)）。另有人建議可以用雲端檔案儲存，如 Cloudflare R2（[1:03:58](https://www.youtube.com/watch?v=doLKqG8TefU&t=3838s)）。同一位講者也說，電腦會自動更新，可能不會全部保留（[1:03:33](https://www.youtube.com/watch?v=doLKqG8TefU&t=3813s)）；這點與文件的說法略有不同，見文末對照。
 
