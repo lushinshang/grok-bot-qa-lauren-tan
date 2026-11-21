@@ -88,7 +88,7 @@ Grok Bot 是 xAI 做的 AI 助理產品：每個 bot 有自己的雲端電腦，
 
 ## 這篇怎麼讀
 
-兩位講者在這場直播裡都談自己的產品。Matt Palmer 是頻道主，直播中說自己在 SpaceX 工作（[39:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=2371s)；x.ai 官方頁尾的公司名是 SpaceX Super Intelligence LLC）；x.ai 官方 marketplace 把兩人的 bot 放在「From Grok Bot Team」分類〔一手〕；Lauren Tan 的 GitHub 個人檔案（自填）也寫任職 @xai-org。影片說明欄附了 x.ai/bot 的連結，沒有標示業配。**所以這是產品團隊談自家產品，不是第三方評測。**
+Matt Palmer 是頻道主，直播中說自己在 SpaceX 工作（[39:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=2371s)；x.ai 官方頁尾的公司名是 SpaceX Super Intelligence LLC）。x.ai 官方 marketplace 把兩人的 bot 放在「From Grok Bot Team」分類〔一手〕，Lauren Tan 的 GitHub 個人檔案（自填）也寫任職 @xai-org。影片說明欄附了 x.ai/bot 的連結，沒有標示業配。**所以這是產品團隊談自家產品，不是第三方評測。**
 
 字幕是 YouTube 上的英文字幕軌，沒有說話者標記。本文只在對話內容能判斷時寫出人名，例如一方稱另一方「Lauren」，或說「我在新加坡長大」；判斷不了的，就寫「直播中有人說」。
 
@@ -98,7 +98,7 @@ Grok Bot 是 xAI 做的 AI 助理產品：每個 bot 有自己的雲端電腦，
 
 直播一開始就有人問用量。他們教的第一步是看帳：頭像 → Settings → Usage and billing → Grok Bot usage，可以依 bot 篩選，看哪個 bot 吃最多（[4:00](https://www.youtube.com/watch?v=doLKqG8TefU&t=240s)）。官方文件的用量頁確有「By Bot」與「By source」兩種看法〔一手〕。
 
-routine 是讓 bot 定時自己工作的設定，每跑一次就花一次額度。講者說，一天跑一次但做很多事的 routine，約等於你和 bot 聊 15 到 30 分鐘（[14:06](https://www.youtube.com/watch?v=doLKqG8TefU&t=846s)）。
+routine 是讓 bot 定時自己工作的設定，每跑一次就花一次額度。講者說，一天跑一次但做很多事的 routine，花的額度約等於你和 bot 聊 15 到 30 分鐘（[14:06](https://www.youtube.com/watch?v=doLKqG8TefU&t=846s)）。
 
 > 重點：文件也提醒，每小時一次的排程，一天就能用掉一週的額度，建議先暫停不需要的 routine〔一手〕。
 
@@ -108,7 +108,7 @@ routine 是讓 bot 定時自己工作的設定，每跑一次就花一次額度�
 2. **能用 webhook 就用 webhook。** routine 像鬧鐘，到點就叫 bot 起床；webhook 是外部服務（例如 Linear）發生事情時才叫醒它（[4:37](https://www.youtube.com/watch?v=doLKqG8TefU&t=277s)、[4:53](https://www.youtube.com/watch?v=doLKqG8TefU&t=293s)）。文件列出 routine 可由 GitHub、Linear、Sentry、PagerDuty 的事件、信件或 webhook 觸發〔一手〕。
 3. **少塞大檔案進對話。** 給 AI 的內容都會進 context（模型一次看得到的範圍），丟一份巨大的表格檔（CSV）進去就是耗額度（[14:32](https://www.youtube.com/watch?v=doLKqG8TefU&t=872s)）。
 
-講者還提到 MCP（讓 AI 連接外部工具的共通規格）有個新的 events 擴充，可以讓 bot 只在事情發生時才醒；他說團隊「在看」，沒說已支援（[5:21](https://www.youtube.com/watch?v=doLKqG8TefU&t=321s)）。這份擴充 MCP 官方已正式通過〔一手〕。
+講者還提到 MCP（讓 AI 連接外部工具的共通規格）有個新的 events 擴充，可以讓 bot 只在事情發生時才醒；他說團隊「在看」，沒說已支援（[5:21](https://www.youtube.com/watch?v=doLKqG8TefU&t=321s)）。MCP 官方已正式通過這份擴充〔一手〕。
 
 有一項只能當傳聞：講者讀了同事貼文，說本週的 harness（驅動 bot 的底層程式）優化，讓方案用量多約 7%、routine 的執行量最多多 15%（[13:24](https://www.youtube.com/watch?v=doLKqG8TefU&t=804s)）。1.0 發布文與官方文件沒有這組數字，只見於一家媒體轉述那則貼文〔二手〕，詳見文末對照。
 
@@ -134,16 +134,20 @@ Lauren 的路徑相近。她一開始想開 50 個，後來發現管理它們本
 
 **Slack 與團隊 bot。** 講者說，在 Slack 開一條討論串叫 bot 去修 bug，大家就能一起看、一起接著聊，bot 像隊友（[16:49](https://www.youtube.com/watch?v=doLKqG8TefU&t=1009s)、[17:05](https://www.youtube.com/watch?v=doLKqG8TefU&t=1025s)）。團隊 bot 需要 Team 或 Enterprise 方案，且團隊至少有另一個人；可在 Grok Bot、Slack、Microsoft Teams 使用〔一手〕。講者也說，在 Slack 可以同時 @ 多個 bot，讓它們互相交棒（[16:12](https://www.youtube.com/watch?v=doLKqG8TefU&t=972s)、[16:21](https://www.youtube.com/watch?v=doLKqG8TefU&t=981s)），這點與文件有出入，見文末對照。
 
-**信箱與電話。** 對 bot 說「幫自己要一個信箱」，就會拿到 mail.grokbot.com 的地址（[7:50](https://www.youtube.com/watch?v=doLKqG8TefU&t=470s)、[7:53](https://www.youtube.com/watch?v=doLKqG8TefU&t=473s)）；文件寫每個帳號一個，要按核准才建立〔一手〕。電話功能則是講者說「一兩週前才上線」（[7:55](https://www.youtube.com/watch?v=doLKqG8TefU&t=475s)），有媒體稱 11 月 4 日宣布〔二手〕；用法是請 bot 打給牙醫改時間（[8:11](https://www.youtube.com/watch?v=doLKqG8TefU&t=491s)、[8:17](https://www.youtube.com/watch?v=doLKqG8TefU&t=497s)），或打給監理站、保險公司排隊（[8:23](https://www.youtube.com/watch?v=doLKqG8TefU&t=503s)、[8:32](https://www.youtube.com/watch?v=doLKqG8TefU&t=512s)）。通話時看得到即時逐字稿，可以自己接手（[8:38](https://www.youtube.com/watch?v=doLKqG8TefU&t=518s)、[8:43](https://www.youtube.com/watch?v=doLKqG8TefU&t=523s)），文件對這兩點都有記載〔一手〕。限制方面，講者說國際電話之後才會有，部分美國州因錄音法規暫時不行（[54:37](https://www.youtube.com/watch?v=doLKqG8TefU&t=3277s)、[54:44](https://www.youtube.com/watch?v=doLKqG8TefU&t=3284s)、[58:44](https://www.youtube.com/watch?v=doLKqG8TefU&t=3524s)、[58:47](https://www.youtube.com/watch?v=doLKqG8TefU&t=3527s)）。文件寫電話功能僅限美國〔一手〕；州別的說法見文末對照。
+**信箱與電話。** 對 bot 說「幫自己要一個信箱」，就會拿到 mail.grokbot.com 的地址（[7:50](https://www.youtube.com/watch?v=doLKqG8TefU&t=470s)、[7:53](https://www.youtube.com/watch?v=doLKqG8TefU&t=473s)）；文件寫每個帳號一個，要按核准才建立〔一手〕。
+
+電話功能，講者說是「一兩週前才上線」（[7:55](https://www.youtube.com/watch?v=doLKqG8TefU&t=475s)），有媒體稱 11 月 4 日宣布〔二手〕；用法是請 bot 打給牙醫改時間（[8:11](https://www.youtube.com/watch?v=doLKqG8TefU&t=491s)、[8:17](https://www.youtube.com/watch?v=doLKqG8TefU&t=497s)），或打給監理站、保險公司排隊（[8:23](https://www.youtube.com/watch?v=doLKqG8TefU&t=503s)、[8:32](https://www.youtube.com/watch?v=doLKqG8TefU&t=512s)）。通話時看得到即時逐字稿，可以自己接手（[8:38](https://www.youtube.com/watch?v=doLKqG8TefU&t=518s)、[8:43](https://www.youtube.com/watch?v=doLKqG8TefU&t=523s)），文件對這兩點都有記載〔一手〕。限制方面，講者說國際電話之後才會有，部分美國州因錄音法規暫時不行（[54:37](https://www.youtube.com/watch?v=doLKqG8TefU&t=3277s)、[54:44](https://www.youtube.com/watch?v=doLKqG8TefU&t=3284s)、[58:44](https://www.youtube.com/watch?v=doLKqG8TefU&t=3524s)、[58:47](https://www.youtube.com/watch?v=doLKqG8TefU&t=3527s)）。文件寫電話功能僅限美國〔一手〕；州別的說法見文末對照。
 
 **iMessage。** 講者說本週剛支援，可傳訊息、讀部分簡訊，目前只有 Apple（[15:11](https://www.youtube.com/watch?v=doLKqG8TefU&t=911s)、[15:15](https://www.youtube.com/watch?v=doLKqG8TefU&t=915s)、[52:36](https://www.youtube.com/watch?v=doLKqG8TefU&t=3156s)）。這項見文末對照。
 
 **範本與 iPhone 快捷鍵。** 想讓朋友試用你的 bot，Matt 的做法是：右側設定裡點分享圖示，把 bot 變成範本，傳連結給對方，一鍵安裝（[6:10](https://www.youtube.com/watch?v=doLKqG8TefU&t=370s)、[6:12](https://www.youtube.com/watch?v=doLKqG8TefU&t=372s)、[6:25](https://www.youtube.com/watch?v=doLKqG8TefU&t=385s)）。Lauren 接著說，她做的 Dr. Eggbot、TinkerBot 都以範本公開，別人可以站在她的做法上改（[6:47](https://www.youtube.com/watch?v=doLKqG8TefU&t=407s)）。另一則是觀眾提醒：在 iPhone 設定裡把側邊的 Action button 指給 Grok Bot，按住就能直接開口跟 bot 通話（[1:05:34](https://www.youtube.com/watch?v=doLKqG8TefU&t=3934s)、[1:06:17](https://www.youtube.com/watch?v=doLKqG8TefU&t=3977s)）；官方 Mobile 文件有這項設定〔一手〕。
 
-**家用與區網。** 一則轉述：有人用 Tailscale 整合，在家中的 Plex 媒體伺服器上，每晚替孩子排睡前歌單（[10:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=631s)、[10:52](https://www.youtube.com/watch?v=doLKqG8TefU&t=652s)）。Tailscale 官方部落格確認 Grok Bot 可連到 tailnet（Tailscale 的私有網路）上的私有 MCP server〔一手〕。一位講者的通則是：只要裝置能接上區網，就叫 bot 自己去摸索（[55:04](https://www.youtube.com/watch?v=doLKqG8TefU&t=3304s)、[55:19](https://www.youtube.com/watch?v=doLKqG8TefU&t=3319s)、[55:37](https://www.youtube.com/watch?v=doLKqG8TefU&t=3337s)）；他還說自己想做一個專案：把熱感收據印表機接上區網，讓 bot 每次送出程式碼修改就印一張（還沒做）（[55:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=3331s)、[55:46](https://www.youtube.com/watch?v=doLKqG8TefU&t=3346s)）；觀眾則問能不能控制 CNC（電腦控制的切削）機台（[54:56](https://www.youtube.com/watch?v=doLKqG8TefU&t=3296s)）。Lauren 舉她的 Elgato 補光燈為例：電腦偵測到鏡頭啟動，就用腳本開燈，bot 自己在 Wi-Fi 上找到那些裝置並呼叫它們的程式介面（API）（[55:59](https://www.youtube.com/watch?v=doLKqG8TefU&t=3359s)、[56:15](https://www.youtube.com/watch?v=doLKqG8TefU&t=3375s)、[59:53](https://www.youtube.com/watch?v=doLKqG8TefU&t=3593s)）。
+**家用與區網。** 一則轉述：有人用 Tailscale 整合，在家中的 Plex 媒體伺服器上，每晚替孩子排睡前歌單（[10:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=631s)、[10:52](https://www.youtube.com/watch?v=doLKqG8TefU&t=652s)）。Tailscale 官方部落格確認 Grok Bot 可連到 tailnet（Tailscale 的私有網路）上的私有 MCP server〔一手〕。
+
+一位講者的通則是：只要裝置能接上區網，就叫 bot 自己去摸索（[55:04](https://www.youtube.com/watch?v=doLKqG8TefU&t=3304s)、[55:19](https://www.youtube.com/watch?v=doLKqG8TefU&t=3319s)、[55:37](https://www.youtube.com/watch?v=doLKqG8TefU&t=3337s)）；他還說自己想做一個專案：把熱感收據印表機接上區網，讓 bot 每次送出程式碼修改就印一張（還沒做）（[55:31](https://www.youtube.com/watch?v=doLKqG8TefU&t=3331s)、[55:46](https://www.youtube.com/watch?v=doLKqG8TefU&t=3346s)）；觀眾則問能不能控制 CNC（電腦控制的切削）機台（[54:56](https://www.youtube.com/watch?v=doLKqG8TefU&t=3296s)）。Lauren 舉她的 Elgato 補光燈為例：電腦偵測到鏡頭啟動，就用腳本開燈，bot 自己在 Wi-Fi 上找到那些裝置並呼叫它們的程式介面（API）（[55:59](https://www.youtube.com/watch?v=doLKqG8TefU&t=3359s)、[56:15](https://www.youtube.com/watch?v=doLKqG8TefU&t=3375s)、[59:53](https://www.youtube.com/watch?v=doLKqG8TefU&t=3593s)）。
 
 ![圖：bot 接進工作的七項功能與依據。官方文件有：會議（Google Meet、Zoom、Teams）、信箱 mail.grokbot.com、電話（僅限美國）、Slack 與 Teams 團隊 bot；合作方頁面有：Tailscale 私有網路；文件有出入：Slack 裡 bot 互相交棒；只有講者與媒體說：iMessage](images/fig-connect-zh.svg)
-*圖說：各項功能的依據；「文件有」指 docs.x.ai 對應頁面有寫。*
+*圖說：本節各項功能有沒有官方依據；「文件有」指 docs.x.ai 對應頁面有寫。*
 
 ## 他們點名的反模式與主張
 
@@ -170,11 +174,11 @@ Lauren 的路徑相近。她一開始想開 50 個，後來發現管理它們本
 
 ## 給想學工程的人
 
-有人問從零開始怎麼成為工程師。一位講者建議用 bot 當家教，例如講者提到量化交易公司 Jane Street 公開的一套「蘇格拉底式」教學 skill（可以裝進 bot 的指令包），叫它用提問的方式教你什麼是編譯器；再把同一個專案重做多遍，每次都學到新東西（[1:11:05](https://www.youtube.com/watch?v=doLKqG8TefU&t=4265s)、[1:11:34](https://www.youtube.com/watch?v=doLKqG8TefU&t=4294s)、[1:11:56](https://www.youtube.com/watch?v=doLKqG8TefU&t=4316s)）。另一位講者回應：**工程不只是寫程式，重點是思考與解題**；偷懶、照單全收 AI 產出的程式，就沒做到「想清楚問題與解法」，所以要有意識地用（[1:12:10](https://www.youtube.com/watch?v=doLKqG8TefU&t=4330s)、[1:13:09](https://www.youtube.com/watch?v=doLKqG8TefU&t=4389s)、[1:13:29](https://www.youtube.com/watch?v=doLKqG8TefU&t=4409s)）。
+有人問從零開始怎麼成為工程師。一位講者建議用 bot 當家教，例如用量化交易公司 Jane Street 公開的一套「蘇格拉底式」教學 skill（可以裝進 bot 的指令包），叫它用提問的方式教你什麼是編譯器；再把同一個專案重做多遍，每次都學到新東西（[1:11:05](https://www.youtube.com/watch?v=doLKqG8TefU&t=4265s)、[1:11:34](https://www.youtube.com/watch?v=doLKqG8TefU&t=4294s)、[1:11:56](https://www.youtube.com/watch?v=doLKqG8TefU&t=4316s)）。另一位講者回應：**工程不只是寫程式，重點是思考與解題**；偷懶、照單全收 AI 產出的程式，就沒做到「想清楚問題與解法」，所以要有意識地用（[1:12:10](https://www.youtube.com/watch?v=doLKqG8TefU&t=4330s)、[1:13:09](https://www.youtube.com/watch?v=doLKqG8TefU&t=4389s)、[1:13:29](https://www.youtube.com/watch?v=doLKqG8TefU&t=4409s)）。
 
 ## 信任：密碼、備份與外部帳號
 
-被問到「什麼可以交給 bot」，Matt 說：Grok Bot 提供安全的輸入管道，bot 永遠看不到密碼；所以放得進密碼管理器的東西，都可以放心交給它（[1:04:26](https://www.youtube.com/watch?v=doLKqG8TefU&t=3866s)、[1:04:34](https://www.youtube.com/watch?v=doLKqG8TefU&t=3874s)）。他另一個提醒是，**絕不要把敏感資訊貼進聊天框**（[1:04:57](https://www.youtube.com/watch?v=doLKqG8TefU&t=3897s)）。官方文件同樣寫 bot 看不到儲存的密碼，也寫不要把密碼、一次性驗證碼或 API 金鑰貼在一般聊天裡〔一手〕。Vault（Grok Bot 存放密碼與信用卡資料的保險箱）的範圍和他的說法有出入，見文末對照。
+被問到「什麼可以交給 bot」，Matt 說：Grok Bot 提供安全的輸入管道，bot 永遠看不到密碼；所以放得進密碼管理器的東西，都可以放心交給它（[1:04:26](https://www.youtube.com/watch?v=doLKqG8TefU&t=3866s)、[1:04:34](https://www.youtube.com/watch?v=doLKqG8TefU&t=3874s)）。他另一個提醒是，**絕不要把敏感資訊貼進聊天框**（[1:04:57](https://www.youtube.com/watch?v=doLKqG8TefU&t=3897s)）。官方文件同樣寫 bot 看不到儲存的密碼，也寫不要把密碼、一次性驗證碼或 API 金鑰貼在一般聊天裡〔一手〕。Vault（Grok Bot 存放密碼與信用卡資料的保險箱）的範圍和他的說法有出入，見下圖與文末對照。
 
 ![圖：講者說放得進密碼管理器的東西都可以放心交給 bot；官方文件寫 bot 看不到已存的密碼與安全輸入表單的內容，但在 app 聊天中看得到已存信用卡的卡號與安全碼和聯絡資料；Vault 全帳號共用，不能限定給某個 bot；不要把密碼、一次性驗證碼、API 金鑰貼進一般聊天](images/fig-trust-zh.svg)
 *圖說：講者的說法與官方 Vault 文件的對照。*
@@ -201,11 +205,18 @@ Lauren 的路徑相近。她一開始想開 50 個，後來發現管理它們本
 
 ## 讀這場直播的限制
 
-這是產品團隊自家的直播，沒有批評者在場，觀眾問題也多半友善，所以**聽到的偏向「能做什麼」，少談失敗與成本**。額度是直播中最常被提起的痛處，直播中說團隊聽到了，但念出的改善數字，1.0 發布文與官方文件都沒有（見〈額度：省在哪裡〉）。功能與方案限制很新，文件在直播前後才大改過，本文依據的是 2026-11-21 的文件版本。最後約十分鐘是閒聊，從海南雞飯、新加坡的擁車證，到 GTA 6，本文都沒放。**要把敏感資料與重要檔案交給 bot 之前，先讀官方文件對那項功能的限制**，不要只憑直播的描述。
+這是產品團隊自家的直播，沒有批評者在場，觀眾問題也多半友善，所以**聽到的偏向「能做什麼」，少談失敗與成本**。額度是直播中最常被提起的痛處；有人說團隊聽到了，但念出的改善數字，1.0 發布文與官方文件都沒有（見〈額度：省在哪裡〉）。功能與方案限制很新，文件在直播前後才大改過，本文依據的是 2026-11-21 的文件版本。最後約十分鐘是閒聊，從海南雞飯、新加坡的擁車證，到 GTA 6，本文都沒放。**要把敏感資料與重要檔案交給 bot 之前，先讀官方文件對那項功能的限制**，不要只憑直播的描述。
 
 ## 製作說明：這篇導讀由 AI 模型完成
 
-本導讀的分析、撰稿、翻譯、查證與插圖皆由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。分工如下：逐句翻譯用 Google 的 Gemini 3.8 Flash（第 1 到 150 句改由 OpenAI Codex 的 gpt-6-luna 備援初譯），逐章修詞用 Claude Sonnet，統一審查、事實查證與獨立審稿用 Claude Opus，撰稿、依審稿意見修稿與統籌為 Claude Sonnet，最後再由一位 Claude Opus 依總編輯準則潤稿並標示重點；封面插畫由 Codex 的 imagegen 生成，圖解由 Claude Sonnet 撰寫 SVG 程式繪製。字幕是 YouTube 上的英文字幕軌，未對照原音逐句校對；專名可能有誤聽，中文依上下文還原。查證原則：重要說法須有官方或合作方的一手頁面才標〔一手〕，只有單方說法者降級標示。另有[全文譯本](translation-zh.html)，以及可邊看影片邊看中英字幕的[字幕播放器](player.html)。
+本導讀的分析、撰稿、翻譯、查證與插圖皆由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。分工如下：
+
+- 翻譯：逐句翻譯用 Google 的 Gemini 3.8 Flash（第 1 到 150 句改由 OpenAI Codex 的 gpt-6-luna 備援初譯），逐章修詞用 Claude Sonnet。
+- 撰稿：Claude Sonnet 撰稿、依審稿意見修稿並統籌。
+- 查證與審稿：統一審查、事實查證與獨立審稿用 Claude Opus；最後由兩位 Claude Opus 分兩輪依總編輯準則潤稿並標示重點。
+- 圖：封面插畫由 Codex 的 imagegen 生成，圖解由 Claude Sonnet 撰寫 SVG 程式繪製。
+
+字幕是 YouTube 上的英文字幕軌，未對照原音逐句校對；專名可能有誤聽，中文依上下文還原。查證原則：重要說法須有官方或合作方的一手頁面才標〔一手〕，只有單方說法的，改用其他標籤標明出處（見〈這篇怎麼讀〉）。另有[全文譯本](translation-zh.html)，以及可邊看影片邊看中英字幕的[字幕播放器](player.html)。
 
 ## 來源清單
 

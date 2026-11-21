@@ -4,7 +4,7 @@ Matt Palmer 與 Lauren Tan 的 86 分鐘直播問答（X 直播日 2026-11-13，
 
 ## 製作聲明
 
-本導讀的分析、撰稿、翻譯、查證與插圖皆由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。主控與撰稿為 Claude Sonnet 5.5；字幕翻譯由 Google Gemini 3.8 Flash（agy gemini-3.8-flash-medium，其中一批由 Codex gpt-6-luna 備援）完成，再由 Claude Sonnet 逐章修詞、Claude Opus 統一審查；查證由 Claude Opus 對照官方文件與第一手來源；獨立審稿由兩位 Claude Opus 完成，全案驗收與最後一輪潤稿（標示重點）各由一位 Claude Opus 完成；封面插畫由 Codex 的 imagegen 生成，圖解由 Claude Sonnet 撰寫 SVG 程式繪製。字幕為 YouTube 影片上的英文字幕軌，未對照原音逐句校對，專名可能有誤聽。查證原則：重要說法須有官方或合作方的一手頁面才標「一手」，只有單方說法者降級標示。
+本導讀的分析、撰稿、翻譯、查證與插圖皆由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。主控與撰稿為 Claude Sonnet 5.5；字幕翻譯由 Google Gemini 3.8 Flash（agy gemini-3.8-flash-medium，其中一批由 Codex gpt-6-luna 備援）完成，再由 Claude Sonnet 逐章修詞、Claude Opus 統一審查；查證由 Claude Opus 對照官方文件與第一手來源；獨立審稿由兩位 Claude Opus 完成，全案驗收由一位 Claude Opus、潤稿（標示重點）由兩位 Claude Opus 分兩輪完成；封面插畫由 Codex 的 imagegen 生成，圖解由 Claude Sonnet 撰寫 SVG 程式繪製。字幕為 YouTube 影片上的英文字幕軌，未對照原音逐句校對，專名可能有誤聽。查證原則：重要說法須有官方或合作方的一手頁面才標「一手」，只有單方說法者降級標示。
 
 ## 檔案
 
