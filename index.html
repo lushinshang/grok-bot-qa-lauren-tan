@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f7b6c%27/%3E%3Cpath d=%27M12 46 26 30l8 8 18-22%27 stroke=%27white%27 stroke-width=%277%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<title>Grok Bot 團隊直播問答：怎麼用、怎麼省，哪些說法要對文件</title>
+<meta name="description" content="Matt Palmer 與 Lauren Tan 的 Grok Bot 直播問答導讀：用量怎麼省、bot 要開幾個、會議與電話、觀眾案例，以及講者說法與官方文件的差異集中對照。">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="Grok Bot 團隊直播問答：怎麼用、怎麼省，哪些說法要對文件">
+<meta property="og:description" content="Matt Palmer 與 Lauren Tan 的 Grok Bot 直播問答導讀：用量怎麼省、bot 要開幾個、會議與電話、觀眾案例，以及講者說法與官方文件的差異集中對照。">
+<meta property="og:image" content="https://lushinshang.github.io/grok-bot-qa-lauren-tan/images/og-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="封面插畫：雨夜裡的家庭工作室，桌上一台筆電亮著柔和的色塊，旁邊有幾張便條紙與一杯熱飲；牆上掛著一排四盞不同顏色的燈，窗外是下雨的城市夜景。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Grok Bot 團隊直播問答：怎麼用、怎麼省，哪些說法要對文件">
+<meta name="twitter:description" content="Matt Palmer 與 Lauren Tan 的 Grok Bot 直播問答導讀：用量怎麼省、bot 要開幾個、會議與電話、觀眾案例，以及講者說法與官方文件的差異集中對照。">
+<meta name="twitter:image" content="https://lushinshang.github.io/grok-bot-qa-lauren-tan/images/og-hero.jpg">
+<meta property="og:url" content="https://lushinshang.github.io/grok-bot-qa-lauren-tan/">
+<style>
+:root{
+  --bg:#f9f7f4; --surface:#fffdf9; --ink:#1a1a1a; --muted:#5f5b54; --line:#e4dfd6;
+  --accent:#0f7b6c; --accent-ink:#0b5c51; --note:#f0ebe1; --code:#ece6d8; --link:#1f5f99;
+  --card:#fff6e8; --card-line:#e8c99a; --shadow:0 6px 24px rgba(40,30,10,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1b1a18; --surface:#26241f; --ink:#ece8de; --muted:#aaa497; --line:#3a3730;
+    --accent:#4fc1ad; --accent-ink:#7fd6c6; --note:#2f2c25; --code:#33302a; --link:#8fbde8;
+    --card:#2d2820; --card-line:#5b4a30; --shadow:0 6px 24px rgba(0,0,0,.35);}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+  font:17px/1.7 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;letter-spacing:0}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;z-index:300}
+.skip:focus{left:8px;top:8px}
+nav.toc{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc ul{list-style:none;margin:0 auto;padding:0 16px;max-width:1120px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;
+  white-space:nowrap;-webkit-overflow-scrolling:touch;min-height:52px;align-items:center}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc a{display:inline-block;padding:8px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:14px;min-height:36px}
+nav.toc a:hover,nav.toc a:focus-visible{background:var(--note);color:var(--ink)}
+a{color:var(--link);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.page{max-width:1120px;margin:0 auto;padding:0 20px 80px}
+header.hero{padding:56px 0 8px;text-align:center}
+.eyebrow{margin:0 0 8px;color:var(--accent-ink);font-weight:700;letter-spacing:0;font-size:14px}
+h1{margin:0 auto 14px;max-width:820px;font-size:clamp(1.7rem,1.2rem + 2vw,2.6rem);line-height:1.3;text-wrap:balance}
+.byline{margin:0 0 6px;color:var(--muted);font-size:14px}
+.video-link{margin:0 0 28px;font-size:14px}
+figure{margin:32px 0}
+figure img{display:block;width:100%;height:auto;aspect-ratio:var(--ar-d,16/9);object-fit:contain;border-radius:12px;
+  box-shadow:var(--shadow);background:var(--surface);cursor:zoom-in}
+@media (max-width:640px){figure picture img{aspect-ratio:var(--ar-m,9/16)}}
+@media (max-width:640px){figure.hero-figure picture img{max-width:300px;margin:0 auto}}
+figure.hero-figure{max-width:720px;margin-left:auto;margin-right:auto}
+hr{border:0;border-top:1px solid var(--line);margin:40px 0}
+p.figcap{margin:-18px auto 1.4em;text-align:center;font-size:14px;color:var(--muted)}
+figcaption{margin:10px auto 0;max-width:720px;font-size:14px;line-height:1.55;color:var(--muted);text-align:center}
+article{max-width:720px;margin:0 auto}
+article figure.section-figure{margin-left:50%;transform:translateX(-50%);width:min(860px,calc(100vw - 32px))}
+h2{margin:56px 0 12px;font-size:1.55rem;line-height:1.4;scroll-margin-top:72px;text-wrap:balance;
+  border-left:5px solid var(--accent);padding-left:14px;margin-left:-19px}
+h3{margin:36px 0 8px;font-size:1.2rem;line-height:1.45}
+p{margin:0 0 1.1em}
+ul,ol{margin:0 0 1.2em;padding-left:1.4em}
+li{margin:.35em 0}
+strong{font-weight:700}
+code{background:var(--code);padding:.1em .4em;border-radius:5px;font:0.9em ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-word}
+section.summary-card{background:var(--card);border:1px solid var(--card-line);border-radius:14px;padding:6px 22px 10px;margin:24px 0 8px;box-shadow:var(--shadow)}
+section.summary-card h2{margin:14px 0 8px;font-size:1.2rem;border-left:0;padding-left:0;margin-left:0}
+section.summary-card p{margin:0 0 .8em;font-size:16.5px}
+ol.takeaways{padding-left:1.6em}
+ol.takeaways li{margin:.8em 0;padding-left:.2em}
+ol.takeaways li::marker{color:var(--accent-ink);font-weight:700}
+ul.sources li{overflow-wrap:anywhere}
+aside.note{background:var(--note);border-left:4px solid var(--accent);border-radius:8px;padding:12px 16px;margin:0 0 1.6em;font-size:15px;color:var(--ink)}
+aside.note p,aside.note ul{margin:0 0 .6em}
+aside.note ul{padding-left:1.3em}
+figure.diagram{margin:28px 0}
+.mermaid-scroll{overflow-x:auto;max-width:100%;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;-webkit-overflow-scrolling:touch}
+.mermaid-scroll pre{margin:0;font:14px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre;color:var(--ink)}
+.mermaid-scroll svg{display:block;margin:0 auto;height:auto;max-width:100%}
+.table-scroll{overflow-x:auto;margin:0 0 1.6em;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.table-scroll table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;line-height:1.55}
+.table-scroll th,.table-scroll td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.table-scroll th{background:var(--note);font-weight:700}
+.table-scroll tr:last-child td{border-bottom:0}
+.table-scroll td.k{font-weight:600;white-space:nowrap}
+.table-scroll td.nw{white-space:nowrap}
+.table-scroll.wide{margin-left:50%;transform:translateX(-50%);width:min(1040px,calc(100vw - 32px))}
+@media (max-width:640px){.table-scroll.wide{margin-left:0;transform:none;width:auto}}
+@media (max-width:640px){
+  .table-scroll{overflow-x:visible}
+  .table-scroll table{min-width:0}
+  .table-scroll thead{position:absolute;left:-9999px}
+  .table-scroll tr,.table-scroll td{display:block}
+  .table-scroll tr{padding:10px 12px;border-bottom:1px solid var(--line)}
+  .table-scroll tr:last-child{border-bottom:0}
+  .table-scroll td{padding:2px 0;border:0}
+  .table-scroll td.k{color:var(--accent-ink);white-space:normal}
+  .table-scroll td.nw{white-space:normal}
+  .table-scroll td::before{content:attr(data-label) "：";font-weight:700;color:var(--muted);font-size:13px}
+}
+
+p.lede{margin:0 auto 10px;max-width:760px;color:var(--muted);font-size:16px;line-height:1.65}
+footer{max-width:720px;margin:64px auto 0;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(20,18,14,.9);align-items:center;justify-content:center;padding:24px}
+.lightbox.is-open{display:flex}
+.lightbox img{max-width:96vw;max-height:90vh;width:auto;height:auto;border-radius:8px;box-shadow:0 12px 48px rgba(0,0,0,.5);background:#fff}
+.lightbox button{position:absolute;top:14px;right:14px;min-width:44px;min-height:44px;padding:8px 14px;border:0;border-radius:999px;
+  background:#fff;color:#222;font-size:15px;cursor:pointer}
+@media (max-width:760px){
+  h2{margin-left:0;border-left:0;padding-left:0;border-top:3px solid var(--accent);padding-top:10px}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .page{padding:0 16px 64px}
+  header.hero{padding-top:36px}
+  h2{font-size:1.35rem}
+  section.summary-card{padding:4px 16px 8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<nav class="toc" aria-label="章節導覽"><ul><li><a href="#sec-1" title="三十秒版">三十秒</a></li><li><a href="#sec-2" title="這篇怎麼讀">怎麼讀</a></li><li><a href="#sec-3" title="額度：省在哪裡">額度</a></li><li><a href="#sec-4" title="bot 要開幾個">編制</a></li><li><a href="#sec-5" title="把 bot 接進工作：會議、Slack、電話">接進工作</a></li><li><a href="#sec-6" title="他們點名的反模式與主張">主張</a></li><li><a href="#sec-7" title="觀眾與朋友怎麼用">案例</a></li><li><a href="#sec-8" title="給想學工程的人">學工程</a></li><li><a href="#sec-9" title="信任：密碼、備份與外部帳號">信任</a></li><li><a href="#sec-10" title="講者說的與官方文件">對照</a></li><li><a href="#sec-11" title="讀這場直播的限制">限制</a></li><li><a href="#sec-12" title="製作說明：這篇導讀由 AI 模型完成">製作說明</a></li><li><a href="#sec-13" title="來源清單">來源</a></li></ul></nav>
+<div class="page">
+<header class="hero">
+<p class="eyebrow">深度導讀</p>
+<h1>Grok Bot 團隊直播問答：怎麼用、怎麼省，哪些說法要對文件</h1>
+<p class="lede">Matt Palmer 與 Lauren Tan 的 86 分鐘直播：用量、bot 編制、會議與電話、觀眾案例，以及講者說法與官方文件的落差</p>
+<p class="byline">整理：2026-11-21　資料截至 2026-11-21</p>
+</header>
+<main id="main"><article>
+<aside class="note"><p>本導讀的分析與撰稿由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿，見〈製作說明〉。</p></aside>
+<figure class="hero-figure"><picture><source media="(max-width: 640px)" srcset="images/hero-9x16.webp"><img src="images/hero-16x9.webp" alt="插畫：雨夜裡的家庭工作室，桌上一台筆電亮著柔和的色塊，旁邊有幾張便條紙與一杯熱飲；牆上掛著一排四盞不同顏色的燈，窗外是下雨的城市夜景" width="1672" height="941" loading="eager" style="--ar-d:1672/941;--ar-m:941/1672" tabindex="0" role="button" aria-label="放大圖片：插畫：雨夜裡的家庭工作室，桌上一台筆電亮著柔和的色塊，旁邊有幾張便條紙與一杯熱飲；牆上掛著一排四盞不同顏色的燈，窗外是下雨的城市夜景"></picture><figcaption>圖說：AI 生成的示意插畫；圖內沒有文字，也不是影片畫面。</figcaption></figure>
+<p>Grok Bot 是 xAI 做的 AI 助理產品：每個 bot 有自己的雲端電腦，能接 Slack、行事曆、信箱，也能排程做事。這支影片是兩位做這個產品的人，在 Grok Bot 1.0 發布那一週的週五晚上開直播，回答觀眾留言（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=33s" target="_blank" rel="noopener noreferrer">0:33</a>）。話題很雜，從省額度、bot 要開幾個、會議與電話，到觀眾拿它做生意、修卡車。<strong>影片的價值在實際用法與「他們自己怎麼想」；功能是否真如所說，要拿官方文件對。</strong>本文兩者都放，講者說的與官方不同之處集中在文末對照表。</p>
+<section class="summary-card" aria-labelledby="sec-1">
+<h2 id="sec-1">三十秒版</h2>
+<ul><li>額度大多燒在 routine（定時任務）上。直播給的對策是：到用量頁依 bot 看哪個最耗，合併或刪掉不用的 routine，能用 webhook（外部事件觸發）的就別讓 bot 定時醒來看（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=240s" target="_blank" rel="noopener noreferrer">4:00</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=263s" target="_blank" rel="noopener noreferrer">4:23</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=277s" target="_blank" rel="noopener noreferrer">4:37</a>）。</li><li>bot 不用開很多。兩位講者都說自己開過太多 bot、後來收斂；他們建議一個主要 bot 加幾個常用的就夠，寫程式這類一次性的工作丟給 Cursor Cloud Agents（Cursor 公司的雲端寫程式助手，做完就關掉）（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1187s" target="_blank" rel="noopener noreferrer">19:47</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1245s" target="_blank" rel="noopener noreferrer">20:45</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1292s" target="_blank" rel="noopener noreferrer">21:32</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1393s" target="_blank" rel="noopener noreferrer">23:13</a>）。</li><li>他們點名的反模式（最常見的錯誤用法），是把 bot 只當聊天機器人；他們要大家把它當會做事的同事（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1883s" target="_blank" rel="noopener noreferrer">31:23</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2161s" target="_blank" rel="noopener noreferrer">36:01</a>）。同時兩人都說，寫給人的話要自己寫（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2025s" target="_blank" rel="noopener noreferrer">33:45</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2061s" target="_blank" rel="noopener noreferrer">34:21</a>）。</li><li>官方文件或合作方頁面能對上的有：會議、信箱、用量頁、routine 耗額度、Tailscale 整合、iPhone 的 Action button。有出入的有範本公開、密碼保險箱（Vault）、在 Slack 讓 bot 互相交棒、電話轉到本人手機，詳見文末對照表。</li><li>觀眾案例很多，但全是留言自述，沒人查證。</li></ul>
+</section>
+<h2 id="sec-2">這篇怎麼讀</h2>
+<p>兩位講者在這場直播裡都談自己的產品。Matt Palmer 是頻道主，直播中說自己在 SpaceX 工作（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2371s" target="_blank" rel="noopener noreferrer">39:31</a>；x.ai 官方頁尾的公司名是 SpaceX Super Intelligence LLC）；x.ai 官方 marketplace 把兩人的 bot 放在「From Grok Bot Team」分類〔一手〕；Lauren Tan 的 GitHub 個人檔案（自填）也寫任職 @xai-org。影片說明欄附了 x.ai/bot 的連結，沒有標示業配。<strong>所以這是產品團隊談自家產品，不是第三方評測。</strong></p>
+<p>字幕是 YouTube 上的英文字幕軌，沒有說話者標記。本文只在對話內容能判斷時寫出人名，例如一方稱另一方「Lauren」，或說「我在新加坡長大」；判斷不了的，就寫「直播中有人說」。</p>
+<p>文中標籤：〔講者〕只有講者這麼說；〔一手〕依官方文件或合作方官方頁（含該頁沒有寫這一點的情況）；〔二手〕只有媒體轉述；〔觀眾〕留言自述。</p>
+<h2 id="sec-3">額度：省在哪裡</h2>
+<p>直播一開始就有人問用量。他們教的第一步是看帳：頭像 → Settings → Usage and billing → Grok Bot usage，可以依 bot 篩選，看哪個 bot 吃最多（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=240s" target="_blank" rel="noopener noreferrer">4:00</a>）。官方文件的用量頁確有「By Bot」與「By source」兩種看法〔一手〕。</p>
+<p>routine 是讓 bot 定時自己工作的設定，每跑一次就花一次額度。講者說，一天跑一次但做很多事的 routine，約等於你和 bot 聊 15 到 30 分鐘（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=846s" target="_blank" rel="noopener noreferrer">14:06</a>）。</p>
+<aside class="note"><p>重點：文件也提醒，每小時一次的排程，一天就能用掉一週的額度，建議先暫停不需要的 routine〔一手〕。</p></aside>
+<p>省的辦法有三個：</p>
+<ol class="takeaways"><li><strong>合併或刪掉不用的 routine。</strong> 講者說，常見的狀況是六個 bot、十幾二十個 routine，額度就不夠用（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=829s" target="_blank" rel="noopener noreferrer">13:49</a>）。另有人提醒，每五分鐘跑一次的 routine 值得停下來想想（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2000s" target="_blank" rel="noopener noreferrer">33:20</a>）。</li><li><strong>能用 webhook 就用 webhook。</strong> routine 像鬧鐘，到點就叫 bot 起床；webhook 是外部服務（例如 Linear）發生事情時才叫醒它（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=277s" target="_blank" rel="noopener noreferrer">4:37</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=293s" target="_blank" rel="noopener noreferrer">4:53</a>）。文件列出 routine 可由 GitHub、Linear、Sentry、PagerDuty 的事件、信件或 webhook 觸發〔一手〕。</li><li><strong>少塞大檔案進對話。</strong> 給 AI 的內容都會進 context（模型一次看得到的範圍），丟一份巨大的表格檔（CSV）進去就是耗額度（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=872s" target="_blank" rel="noopener noreferrer">14:32</a>）。</li></ol>
+<p>講者還提到 MCP（讓 AI 連接外部工具的共通規格）有個新的 events 擴充，可以讓 bot 只在事情發生時才醒；他說團隊「在看」，沒說已支援（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=321s" target="_blank" rel="noopener noreferrer">5:21</a>）。這份擴充 MCP 官方已正式通過〔一手〕。</p>
+<p>有一項只能當傳聞：講者讀了同事貼文，說本週的 harness（驅動 bot 的底層程式）優化，讓方案用量多約 7%、routine 的執行量最多多 15%（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=804s" target="_blank" rel="noopener noreferrer">13:24</a>）。1.0 發布文與官方文件沒有這組數字，只見於一家媒體轉述那則貼文〔二手〕，詳見文末對照。</p>
+<figure class="section-figure"><picture><source media="(max-width: 640px)" srcset="images/fig-wake-zh-mobile.svg"><img src="images/fig-wake-zh.svg" alt="圖：三種讓 bot 工作的方式與花費。routine 依排程定時叫醒 bot，不管有沒有事，每次都花額度；webhook 與事件由外部服務在事情發生時叫醒 bot，只在有事時花額度；你直接對話是你主動說話時花額度" width="1000" height="400" loading="lazy" style="--ar-d:1000/400;--ar-m:480/640" tabindex="0" role="button" aria-label="放大圖片：圖：三種讓 bot 工作的方式與花費。routine 依排程定時叫醒 bot，不管有沒有事，每次都花額度；webhook 與事件由外部服務在事情發生時叫醒 bot，只在有事時花額度；你直接對話是你主動說話時花額度"></picture><figcaption>圖：三種讓 bot 工作的方式與花費。routine 依排程定時叫醒 bot，不管有沒有事，每次都花額度；webhook 與事件由外部服務在事情發生時叫醒 bot，只在有事時花額度；你直接對話是你主動說話時花額度</figcaption></figure>
+<h2 id="sec-4">bot 要開幾個</h2>
+<p>有人問，講者自己開幾個。Matt 說自己經歷過一段「開太多 bot」的階段：Grok Bot 一出來就開了一大堆，多到管不過來（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1187s" target="_blank" rel="noopener noreferrer">19:47</a>）。他後來把 bot 當工具：<strong>經常遇到的問題才值得一個專職 bot</strong>，例如寫文案的；偶爾才有的事，像在二手平台賣東西，就開一個用完即丟的（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1208s" target="_blank" rel="noopener noreferrer">20:08</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1222s" target="_blank" rel="noopener noreferrer">20:22</a>）。</p>
+<p>Lauren 的路徑相近。她一開始想開 50 個，後來發現管理它們本身就很累，於是合併（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1248s" target="_blank" rel="noopener noreferrer">20:48</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1261s" target="_blank" rel="noopener noreferrer">21:01</a>）。她把 bot 當同事看待，每個都取人名，現在有管她 X 帳號的、做工程的、當個人助理的（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1268s" target="_blank" rel="noopener noreferrer">21:08</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1275s" target="_blank" rel="noopener noreferrer">21:15</a>）。寫程式的專案則丟給 Cursor 專案或 Cursor Cloud Agents：它們用完就消失，不用一直留在 bot 清單裡（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1292s" target="_blank" rel="noopener noreferrer">21:32</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1301s" target="_blank" rel="noopener noreferrer">21:41</a>）。</p>
+<p>幾個相關的產品設計：</p>
+<ul><li><strong>primary bot（主要 bot）。</strong> 可以指定一個，講者把它比喻成幕僚長（chief of staff）（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1336s" target="_blank" rel="noopener noreferrer">22:16</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1343s" target="_blank" rel="noopener noreferrer">22:23</a>）。文件寫的是「主要聯絡人，會自己找你，也協調其他 bot」〔一手〕。</li><li><strong>Cursor Cloud Agents。</strong> Lauren 把它說成 bot 的小幫手：它有自己的電腦，做完事就走；bot 自己寫程式會被卡住，叫幫手去做，bot 就能同時做別的事（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1393s" target="_blank" rel="noopener noreferrer">23:13</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1415s" target="_blank" rel="noopener noreferrer">23:35</a>）。Matt 補充兩個好處：寫程式用的環境可以裝一堆技能與連線，不必塞進 bot 自己的 context；也能搭配不同模型（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1452s" target="_blank" rel="noopener noreferrer">24:12</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1477s" target="_blank" rel="noopener noreferrer">24:37</a>）。他自己剪影片就走這條路，Grok Bot 發任務給 Cursor Cloud Agents，後面接自己寫的工具（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1508s" target="_blank" rel="noopener noreferrer">25:08</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1516s" target="_blank" rel="noopener noreferrer">25:16</a>）。</li><li><strong>接新工具。</strong> 只要那個服務開放程式介面（MCP 或 API），就能做成 bot 的自訂工具；Lauren 的 TinkerBot 範本就是拿來做這件事（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1360s" target="_blank" rel="noopener noreferrer">22:40</a>）。</li></ul>
+<figure class="section-figure"><picture><source media="(max-width: 640px)" srcset="images/fig-team-zh-mobile.svg"><img src="images/fig-team-zh.svg" alt="圖：bot 編制。中間是 primary bot，講者比喻成幕僚長；旁邊是幾個長期專職 bot，如管 X 帳號、做工程、個人助理；下方是用完就消失的 Cursor Cloud Agents，由 bot 發任務給它們" width="1000" height="470" loading="lazy" style="--ar-d:1000/470;--ar-m:480/600" tabindex="0" role="button" aria-label="放大圖片：圖：bot 編制。中間是 primary bot，講者比喻成幕僚長；旁邊是幾個長期專職 bot，如管 X 帳號、做工程、個人助理；下方是用完就消失的 Cursor Cloud Agents，由 bot 發任務給它們"></picture><figcaption>圖：bot 編制。中間是 primary bot，講者比喻成幕僚長；旁邊是幾個長期專職 bot，如管 X 帳號、做工程、個人助理；下方是用完就消失的 Cursor Cloud Agents，由 bot 發任務給它們</figcaption></figure>
+<h2 id="sec-5">把 bot 接進工作：會議、Slack、電話</h2>
+<p><strong>會議。</strong> Lauren 被問到最喜歡的功能時，先提購物，接著提到會議（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=44s" target="_blank" rel="noopener noreferrer">0:44</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=55s" target="_blank" rel="noopener noreferrer">0:55</a>）：bot 可以代你進 Google Meet 或 Zoom，做會議紀錄；在會議聊天室點它的名字，它會去做事並回在聊天室（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=57s" target="_blank" rel="noopener noreferrer">0:57</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=69s" target="_blank" rel="noopener noreferrer">1:09</a>）。官方文件吻合，還多列 Microsoft Teams；這個功能有方案限制，以官方頁為準〔一手〕。另一位講者接著說，會議中它能動用你接上的任何 connector（連線外部服務的接口），例如去 Notion 找資料（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=91s" target="_blank" rel="noopener noreferrer">1:31</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=99s" target="_blank" rel="noopener noreferrer">1:39</a>）。</p>
+<p><strong>Slack 與團隊 bot。</strong> 講者說，在 Slack 開一條討論串叫 bot 去修 bug，大家就能一起看、一起接著聊，bot 像隊友（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1009s" target="_blank" rel="noopener noreferrer">16:49</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1025s" target="_blank" rel="noopener noreferrer">17:05</a>）。團隊 bot 需要 Team 或 Enterprise 方案，且團隊至少有另一個人；可在 Grok Bot、Slack、Microsoft Teams 使用〔一手〕。講者也說，在 Slack 可以同時 @ 多個 bot，讓它們互相交棒（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=972s" target="_blank" rel="noopener noreferrer">16:12</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=981s" target="_blank" rel="noopener noreferrer">16:21</a>），這點與文件有出入，見文末對照。</p>
+<p><strong>信箱與電話。</strong> 對 bot 說「幫自己要一個信箱」，就會拿到 mail.grokbot.com 的地址（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=470s" target="_blank" rel="noopener noreferrer">7:50</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=473s" target="_blank" rel="noopener noreferrer">7:53</a>）；文件寫每個帳號一個，要按核准才建立〔一手〕。電話功能則是講者說「一兩週前才上線」（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=475s" target="_blank" rel="noopener noreferrer">7:55</a>），有媒體稱 11 月 4 日宣布〔二手〕；用法是請 bot 打給牙醫改時間（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=491s" target="_blank" rel="noopener noreferrer">8:11</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=497s" target="_blank" rel="noopener noreferrer">8:17</a>），或打給監理站、保險公司排隊（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=503s" target="_blank" rel="noopener noreferrer">8:23</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=512s" target="_blank" rel="noopener noreferrer">8:32</a>）。通話時看得到即時逐字稿，可以自己接手（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=518s" target="_blank" rel="noopener noreferrer">8:38</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=523s" target="_blank" rel="noopener noreferrer">8:43</a>），文件對這兩點都有記載〔一手〕。限制方面，講者說國際電話之後才會有，部分美國州因錄音法規暫時不行（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3277s" target="_blank" rel="noopener noreferrer">54:37</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3284s" target="_blank" rel="noopener noreferrer">54:44</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3524s" target="_blank" rel="noopener noreferrer">58:44</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3527s" target="_blank" rel="noopener noreferrer">58:47</a>）。文件寫電話功能僅限美國〔一手〕；州別的說法見文末對照。</p>
+<p><strong>iMessage。</strong> 講者說本週剛支援，可傳訊息、讀部分簡訊，目前只有 Apple（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=911s" target="_blank" rel="noopener noreferrer">15:11</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=915s" target="_blank" rel="noopener noreferrer">15:15</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3156s" target="_blank" rel="noopener noreferrer">52:36</a>）。這項見文末對照。</p>
+<p><strong>範本與 iPhone 快捷鍵。</strong> 想讓朋友試用你的 bot，Matt 的做法是：右側設定裡點分享圖示，把 bot 變成範本，傳連結給對方，一鍵安裝（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=370s" target="_blank" rel="noopener noreferrer">6:10</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=372s" target="_blank" rel="noopener noreferrer">6:12</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=385s" target="_blank" rel="noopener noreferrer">6:25</a>）。Lauren 接著說，她做的 Dr. Eggbot、TinkerBot 都以範本公開，別人可以站在她的做法上改（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=407s" target="_blank" rel="noopener noreferrer">6:47</a>）。另一則是觀眾提醒：在 iPhone 設定裡把側邊的 Action button 指給 Grok Bot，按住就能直接開口跟 bot 通話（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3934s" target="_blank" rel="noopener noreferrer">1:05:34</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3977s" target="_blank" rel="noopener noreferrer">1:06:17</a>）；官方 Mobile 文件有這項設定〔一手〕。</p>
+<p><strong>家用與區網。</strong> 一則轉述：有人用 Tailscale 整合，在家中的 Plex 媒體伺服器上，每晚替孩子排睡前歌單（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=631s" target="_blank" rel="noopener noreferrer">10:31</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=652s" target="_blank" rel="noopener noreferrer">10:52</a>）。Tailscale 官方部落格確認 Grok Bot 可連到 tailnet（Tailscale 的私有網路）上的私有 MCP server〔一手〕。一位講者的通則是：只要裝置能接上區網，就叫 bot 自己去摸索（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3304s" target="_blank" rel="noopener noreferrer">55:04</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3319s" target="_blank" rel="noopener noreferrer">55:19</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3337s" target="_blank" rel="noopener noreferrer">55:37</a>）；他還說自己想做一個專案：把熱感收據印表機接上區網，讓 bot 每次送出程式碼修改就印一張（還沒做）（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3331s" target="_blank" rel="noopener noreferrer">55:31</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3346s" target="_blank" rel="noopener noreferrer">55:46</a>）；觀眾則問能不能控制 CNC（電腦控制的切削）機台（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3296s" target="_blank" rel="noopener noreferrer">54:56</a>）。Lauren 舉她的 Elgato 補光燈為例：電腦偵測到鏡頭啟動，就用腳本開燈，bot 自己在 Wi-Fi 上找到那些裝置並呼叫它們的程式介面（API）（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3359s" target="_blank" rel="noopener noreferrer">55:59</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3375s" target="_blank" rel="noopener noreferrer">56:15</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3593s" target="_blank" rel="noopener noreferrer">59:53</a>）。</p>
+<h2 id="sec-6">他們點名的反模式與主張</h2>
+<p><strong>別只當聊天機器人。</strong> 一位講者說，聊天機器人是大語言模型的第一版，只有文字；Grok Bot 是 AI 隊友，要接工具、排 routine、放進 Slack 與會議（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2161s" target="_blank" rel="noopener noreferrer">36:01</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2172s" target="_blank" rel="noopener noreferrer">36:12</a>）。講者描述的「野心」包含：叫 bot 訂午餐、冰箱快沒了就補貨（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1941s" target="_blank" rel="noopener noreferrer">32:21</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1951s" target="_blank" rel="noopener noreferrer">32:31</a>），或是更正經的，同步更新 Notion 文件、Slack 通知與程式碼，再派 Cursor Cloud Agent 去改（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1793s" target="_blank" rel="noopener noreferrer">29:53</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=1822s" target="_blank" rel="noopener noreferrer">30:22</a>）。</p>
+<p><strong>自己要說的話自己寫。</strong> Matt 說他不喜歡把溝通外包給 AI；拿 bot 的輸出直接發推，頂多是起點，「那不是我」，他把這種用法叫「slop in, slop out」，意思是 AI 爛稿進、AI 爛稿出（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2025s" target="_blank" rel="noopener noreferrer">33:45</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2050s" target="_blank" rel="noopener noreferrer">34:10</a>）。Lauren 附和：寫作本身就是思考；用語音跟 bot 講話，有時候講到自己都不知道在講什麼，動手打字才逼得出想法（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2061s" target="_blank" rel="noopener noreferrer">34:21</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2071s" target="_blank" rel="noopener noreferrer">34:31</a>）。所以她請 bot 找資料，但自己寫（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2105s" target="_blank" rel="noopener noreferrer">35:05</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2110s" target="_blank" rel="noopener noreferrer">35:10</a>）。</p>
+<h2 id="sec-7">觀眾與朋友怎麼用</h2>
+<p>這一段占了影片相當篇幅，大多是觀眾留言。下表挑具代表性的；<strong>全部是自述，沒有查證。</strong></p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">用途</th><th scope="col">做法（自述）</th><th scope="col">時間</th></tr></thead><tbody><tr><td data-label="用途">咖啡店經營〔講者轉述朋友〕</td><td data-label="做法（自述）">接店裡收銀系統（POS）的資料介面，問「上季什麼賣得好、什麼該下架」；也用在排班與工時</td><td data-label="時間"><a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2393s" target="_blank" rel="noopener noreferrer">39:53</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2411s" target="_blank" rel="noopener noreferrer">40:11</a></td></tr><tr><td data-label="用途">高中足球選手招募〔觀眾〕</td><td data-label="做法（自述）">在 X 上找球員、聯絡，自稱三天內累積超過 3,000 位潛在人選</td><td data-label="時間"><a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2889s" target="_blank" rel="noopener noreferrer">48:09</a></td></tr><tr><td class="k" data-label="用途">名片整理〔觀眾〕</td><td data-label="做法（自述）">展場收 20 到 30 張名片，鋪桌上拍照，請 bot 產出能匯入客戶管理系統 Salesforce 的試算表</td><td data-label="時間"><a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3060s" target="_blank" rel="noopener noreferrer">51:00</a></td></tr><tr><td data-label="用途">醫療帳單與福利說明〔觀眾〕</td><td data-label="做法（自述）">拿保險公司寄的福利說明書（EOB）對醫療帳單；講者補一句：選方案這種難決定，最好也找人討論</td><td data-label="時間"><a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2827s" target="_blank" rel="noopener noreferrer">47:07</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2875s" target="_blank" rel="noopener noreferrer">47:55</a></td></tr><tr><td data-label="用途">找大學獎學金〔觀眾〕</td><td data-label="做法（自述）">開一個 routine，替女兒持續搜尋</td><td data-label="時間"><a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3089s" target="_blank" rel="noopener noreferrer">51:29</a></td></tr><tr><td data-label="用途">找婚禮攝影師〔觀眾〕</td><td data-label="做法（自述）">給 bot 喜歡的風格連結，每天送一份符合風格的名單</td><td data-label="時間"><a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3480s" target="_blank" rel="noopener noreferrer">58:00</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3484s" target="_blank" rel="noopener noreferrer">58:04</a></td></tr><tr><td class="k" data-label="用途">銷售名單〔觀眾〕</td><td data-label="做法（自述）">從客戶管理系統 HubSpot 找最有意願的潛在客戶、寫開發信、整理成撥號清單</td><td data-label="時間"><a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3407s" target="_blank" rel="noopener noreferrer">56:47</a></td></tr><tr><td class="k" data-label="用途">卡車維修〔觀眾〕</td><td data-label="做法（自述）">自製 Master Mechanic bot，依症狀教你修，並找零件；留言者說車因此能穩定發動</td><td data-label="時間"><a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=4166s" target="_blank" rel="noopener noreferrer">1:09:26</a></td></tr></tbody></table></div>
+<p>講者自己的用法：Lauren 說受邀上 podcast 前，會叫 bot 查最近的話題（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2615s" target="_blank" rel="noopener noreferrer">43:35</a>）；講者也說自己會把紙本文件拍照丟給 bot 處理（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3083s" target="_blank" rel="noopener noreferrer">51:23</a>），並用 bot 盯訂位的取消名額，一收到通知就臨時卡進去（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3127s" target="_blank" rel="noopener noreferrer">52:07</a>）。他們的朋友、在 X 上播出的節目 MTS 則用 bot 查來賓近況，做成流程稿放進 Google Doc（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2648s" target="_blank" rel="noopener noreferrer">44:08</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2689s" target="_blank" rel="noopener noreferrer">44:49</a>）。涉及法律的，他們提醒仍要找律師（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2774s" target="_blank" rel="noopener noreferrer">46:14</a>）。</p>
+<h2 id="sec-8">給想學工程的人</h2>
+<p>有人問從零開始怎麼成為工程師。一位講者建議用 bot 當家教，例如講者提到量化交易公司 Jane Street 公開的一套「蘇格拉底式」教學 skill（可以裝進 bot 的指令包），叫它用提問的方式教你什麼是編譯器；再把同一個專案重做多遍，每次都學到新東西（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=4265s" target="_blank" rel="noopener noreferrer">1:11:05</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=4294s" target="_blank" rel="noopener noreferrer">1:11:34</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=4316s" target="_blank" rel="noopener noreferrer">1:11:56</a>）。另一位講者回應：<strong>工程不只是寫程式，重點是思考與解題</strong>；偷懶、照單全收 AI 產出的程式，就沒做到「想清楚問題與解法」，所以要有意識地用（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=4330s" target="_blank" rel="noopener noreferrer">1:12:10</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=4389s" target="_blank" rel="noopener noreferrer">1:13:09</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=4409s" target="_blank" rel="noopener noreferrer">1:13:29</a>）。</p>
+<h2 id="sec-9">信任：密碼、備份與外部帳號</h2>
+<p>被問到「什麼可以交給 bot」，Matt 說：Grok Bot 提供安全的輸入管道，bot 永遠看不到密碼；所以放得進密碼管理器的東西，都可以放心交給它（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3866s" target="_blank" rel="noopener noreferrer">1:04:26</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3874s" target="_blank" rel="noopener noreferrer">1:04:34</a>）。他另一個提醒是，<strong>絕不要把敏感資訊貼進聊天框</strong>（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3897s" target="_blank" rel="noopener noreferrer">1:04:57</a>）。官方文件同樣寫 bot 看不到儲存的密碼，也寫不要把密碼、一次性驗證碼或 API 金鑰貼在一般聊天裡〔一手〕。Vault（Grok Bot 存放密碼與信用卡資料的保險箱）的範圍和他的說法有出入，見文末對照。</p>
+<p><strong>備份。</strong> 有人問 bot 的電腦怎麼備份。直播中有人建議：用完即丟的東西留在 bot 的電腦；要保存的，備份到 GitHub、Google Drive、Dropbox（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3821s" target="_blank" rel="noopener noreferrer">1:03:41</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3826s" target="_blank" rel="noopener noreferrer">1:03:46</a>）。另有人建議可以用雲端檔案儲存，如 Cloudflare R2（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3838s" target="_blank" rel="noopener noreferrer">1:03:58</a>）。同一位講者也說，電腦會自動更新，可能不會全部保留（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3813s" target="_blank" rel="noopener noreferrer">1:03:33</a>）；這點與文件的說法略有不同，見文末對照。</p>
+<p><strong>發訊息前先問你。</strong> 有人問：用 bot 發 X 的私訊或貼文，會不會被停權？講者答不會，因為整合每次發訊息前都會請你核准，符合服務條款；腳本或可疑做法則會被封（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2980s" target="_blank" rel="noopener noreferrer">49:40</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2985s" target="_blank" rel="noopener noreferrer">49:45</a>、<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2995s" target="_blank" rel="noopener noreferrer">49:55</a>）。這一條在官方文件找不到對應的明文。</p>
+<h2 id="sec-10">講者說的與官方文件</h2>
+<div class="table-scroll" tabindex="0" role="region" aria-label="表格（可左右捲動）"><table><thead><tr><th scope="col">講者怎麼說</th><th scope="col">官方文件寫的</th></tr></thead><tbody><tr><td data-label="講者怎麼說">範本的公開副本不含任何私人資訊（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=377s" target="_blank" rel="noopener noreferrer">6:17</a>）</td><td data-label="官方文件寫的">收件人拿不到你的電腦、登入與對話紀錄，但公開連結會露出 bot 的身分、描述、skills 和 routines；分享前要先移除 API 金鑰、內部網址、客戶資料〔一手〕</td></tr><tr><td data-label="講者怎麼說">放得進密碼管理器的東西，都可以放心交給 bot（他接著補了但書：像身分證號這類，可能連密碼管理器都不該放）（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3874s" target="_blank" rel="noopener noreferrer">1:04:34</a>）</td><td data-label="官方文件寫的">bot 看不到密碼，但在 app 聊天中看得到已存信用卡的卡號與安全碼；Vault 全帳號共用〔一手〕</td></tr><tr><td data-label="講者怎麼說">在 Slack 同時 @ 多個 bot 可交棒（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=972s" target="_blank" rel="noopener noreferrer">16:12</a>）</td><td data-label="官方文件寫的">個人 bot 在 Slack 討論串不能傳訊給其他 bot；要先分享成團隊 bot〔一手〕</td></tr><tr><td data-label="講者怎麼說">通話可轉到你的手機號碼（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=506s" target="_blank" rel="noopener noreferrer">8:26</a>）</td><td data-label="官方文件寫的">文件寫「接手（Take over）」，沒寫轉到個人號碼〔一手〕</td></tr><tr><td data-label="講者怎麼說">部分州因錄音法暫不支援（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3524s" target="_blank" rel="noopener noreferrer">58:44</a>）</td><td data-label="官方文件寫的">只寫僅限美國；沒有州別說明〔一手〕</td></tr><tr><td data-label="講者怎麼說">本週的優化讓用量多約 7%、routine 的執行量最多多 15%（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=804s" target="_blank" rel="noopener noreferrer">13:24</a>）</td><td data-label="官方文件寫的">1.0 發布文與官方文件沒有這組數字；僅一家媒體轉述〔二手〕</td></tr><tr><td data-label="講者怎麼說">iMessage 本週支援（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=911s" target="_blank" rel="noopener noreferrer">15:11</a>）</td><td data-label="官方文件寫的">文件未列；有媒體稱是 Mac app 功能〔二手〕</td></tr><tr><td data-label="講者怎麼說">電腦更新時可能不會全部保留（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3813s" target="_blank" rel="noopener noreferrer">1:03:33</a>）</td><td data-label="官方文件寫的">一般更新與復原後檔案會保留；暫存目錄與手動安裝的程式會掉〔一手〕</td></tr><tr><td data-label="講者怎麼說">會議中它能動用你接上的任何 connector（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=91s" target="_blank" rel="noopener noreferrer">1:31</a>）</td><td data-label="官方文件寫的">文件寫它在會議聊天室回答問題，沒有這句說明〔一手〕</td></tr><tr><td data-label="講者怎麼說">連上 Tailscale 後，bot 能控制區網上的裝置（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=3705s" target="_blank" rel="noopener noreferrer">1:01:45</a>）</td><td data-label="官方文件寫的">Tailscale 官方部落格只談 Grok Bot 連到 tailnet 上的私有 MCP server，並受該網路的權限規則管控〔一手〕</td></tr><tr><td data-label="講者怎麼說">發 X 私訊與貼文一律先核准〔講者〕（<a href="https://www.youtube.com/watch?v=doLKqG8TefU&amp;t=2985s" target="_blank" rel="noopener noreferrer">49:45</a>）</td><td data-label="官方文件寫的">官方文件沒有這條明文</td></tr></tbody></table></div>
+<h2 id="sec-11">讀這場直播的限制</h2>
+<p>這是產品團隊自家的直播，沒有批評者在場，觀眾問題也多半友善，所以<strong>聽到的偏向「能做什麼」，少談失敗與成本</strong>。額度是直播中最常被提起的痛處，直播中說團隊聽到了，但念出的改善數字，1.0 發布文與官方文件都沒有（見〈額度：省在哪裡〉）。功能與方案限制很新，文件在直播前後才大改過，本文依據的是 2026-11-21 的文件版本。最後約十分鐘是閒聊，從海南雞飯、新加坡的擁車證，到 GTA 6，本文都沒放。<strong>要把敏感資料與重要檔案交給 bot 之前，先讀官方文件對那項功能的限制</strong>，不要只憑直播的描述。</p>
+<h2 id="sec-12">製作說明：這篇導讀由 AI 模型完成</h2>
+<p>本導讀的分析、撰稿、翻譯、查證與插圖皆由 AI 模型完成，不是人類分析，也沒有經過人工逐句校稿。分工如下：逐句翻譯用 Google 的 Gemini 3.8 Flash（第 1 到 150 句改由 OpenAI Codex 的 gpt-6-luna 備援初譯），逐章修詞用 Claude Sonnet，統一審查、事實查證與獨立審稿用 Claude Opus，撰稿、依審稿意見修稿與統籌為 Claude Sonnet，最後再由一位 Claude Opus 依總編輯準則潤稿並標示重點；封面插畫由 Codex 的 imagegen 生成，圖解由 Claude Sonnet 撰寫 SVG 程式繪製。字幕是 YouTube 上的英文字幕軌，未對照原音逐句校對；專名可能有誤聽，中文依上下文還原。查證原則：重要說法須有官方或合作方的一手頁面才標〔一手〕，只有單方說法者降級標示。另有<a href="translation-zh.html">全文譯本</a>，以及可邊看影片邊看中英字幕的<a href="player.html">字幕播放器</a>。</p>
+<h2 id="sec-13">來源清單</h2>
+<ul class="sources"><li>Matt Palmer 頻道：〈Grok Bot Q&amp;A with Lauren Tan〉，2026-11-20 上傳（X 直播日 2026-11-13）。https://www.youtube.com/watch?v=doLKqG8TefU</li><li>x.ai：Introducing Grok Bot 1.0（頁面標 2026-11-11，2026-11-21 讀取）。https://x.ai/news/grok-bot-1-0</li><li>Grok Bot 文件（docs.x.ai，2026-11-21 讀取；各頁 dateModified 為 2026-11-13 至 11-19）：</li></ul>
+<p><a href="https://docs.x.ai/grok-bot/overview" target="_blank" rel="noopener noreferrer">Overview</a>、<a href="https://docs.x.ai/grok-bot/meetings" target="_blank" rel="noopener noreferrer">Meetings</a>、<a href="https://docs.x.ai/grok-bot/settings-and-notifications" target="_blank" rel="noopener noreferrer">Settings and notifications</a>、<a href="https://docs.x.ai/grok-bot/skills-routines-and-automations" target="_blank" rel="noopener noreferrer">Skills, routines and automations</a>、<a href="https://docs.x.ai/grok-bot/bots" target="_blank" rel="noopener noreferrer">Bots</a>、<a href="https://docs.x.ai/grok-bot/chat-and-collaboration" target="_blank" rel="noopener noreferrer">Chat and collaboration</a>、<a href="https://docs.x.ai/grok-bot/team-bots" target="_blank" rel="noopener noreferrer">Team bots</a>、<a href="https://docs.x.ai/grok-bot/vault" target="_blank" rel="noopener noreferrer">Vault</a>、<a href="https://docs.x.ai/grok-bot/approvals-security-and-privacy" target="_blank" rel="noopener noreferrer">Approvals, security and privacy</a>、<a href="https://docs.x.ai/grok-bot/computer-and-apps" target="_blank" rel="noopener noreferrer">Computer and apps</a>、<a href="https://docs.x.ai/grok-bot/files-and-results" target="_blank" rel="noopener noreferrer">Files and results</a>、<a href="https://docs.x.ai/grok-bot/mobile" target="_blank" rel="noopener noreferrer">Mobile</a></p>
+<ul class="sources"><li>Tailscale：Grok Bot has a Tailscale integration（2026-11-09）。https://tailscale.com/blog/oauth-apps-ga</li><li>Model Context Protocol：SEP-3415 Events extension（2026-10-05 建立，狀態 Final）。https://modelcontextprotocol.io/seps/3415-events-extension</li><li>x.ai：Grok Bot marketplace（無日期，2026-11-21 讀取）。https://x.ai/bot/marketplace</li><li>poteto 的 GitHub 個人檔案（自填資料，2026-11-21 讀取）。https://github.com/poteto</li><li>Teslanorth：電話功能上線（2026-11-04，二手）。https://teslanorth.com/2026/11/04/grok-bot-phone-calls-live/</li><li>Teslanorth：效率改善與 7%／15% 轉述（2026-11-14，二手）。https://teslanorth.com/2026/11/14/grok-bot-efficiency-more-usage/</li><li>iPhone in Canada：Mac app 連接 Messages、Mail（2026-11-12，二手）。https://www.iphoneincanada.ca/2026/11/12/grok-bot-mac-messages-mail-apps/</li><li>前案導讀（同一產品的其他影片）：<a href="https://lushinshang.github.io/grok-bot-lightcone/" target="_blank" rel="noopener noreferrer">把 bot 當新同事（YC Lightcone）</a>、<a href="https://lushinshang.github.io/lauren-tan-code-slop/" target="_blank" rel="noopener noreferrer">把糾正寫成規則（Lauren Tan 演講）</a></li></ul>
+</article></main>
+<footer>
+<p>本頁為對 YouTube 影片〈Grok Bot Q&amp;A with Lauren Tan〉的非官方導讀，影片由 Matt Palmer 頻道上傳，版權屬原權利人。本導讀的分析、撰稿、翻譯、查證與插圖皆由 AI 模型完成，並非人類分析，未經人工逐句校稿，依 YouTube 英文字幕整理，未對照原音逐句校對（分工見〈製作說明〉）。內容資料截至 2026-11-21。</p>
+<p>另見：<a href="player.html">字幕同步播放器</a>、<a href="translation-zh.html">全文譯本</a>。</p>
+</footer>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="圖片放大檢視"><button type="button" aria-label="關閉放大檢視">關閉（Esc）</button><img src="" alt=""></div>
+<script>
+(function(){
+  var box=document.getElementById('lightbox'), big=box.querySelector('img'), btn=box.querySelector('button'), last=null;
+  function open(img){last=img;big.src=img.currentSrc||img.src;big.alt=img.alt;box.classList.add('is-open');btn.focus();}
+  function close(){box.classList.remove('is-open');big.removeAttribute('src');if(last){last.focus();}}
+  document.querySelectorAll('figure img').forEach(function(img){
+    img.addEventListener('click',function(){open(img);});
+    img.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});
+  });
+  box.addEventListener('click',function(e){if(e.target===box||e.target===btn){close();}});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){close();}
+    if(e.key==='Tab'){e.preventDefault();btn.focus();}
+  });
+})();
+</script>
+</body>
+</html>

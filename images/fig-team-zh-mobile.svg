@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>bot 編制</title>
+<desc>上方一個主要 bot（primary bot），講者比喻成幕僚長（影片 22:16）。中間三個長期專職 bot：管 X 帳號、做工程、個人助理，講者把它們當同事、取人名（21:08）。下方是 Cursor Cloud Agents，用完就消失，由 bot 發任務給它（23:13）。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="480" height="600" fill="#fbfaf7"/>
+<rect x="60" y="24" width="360" height="78" rx="8" fill="#ffffff" stroke="#d9822b" stroke-width="3"/>
+<text x="240" y="58" font-size="19" fill="#222222" font-weight="bold" text-anchor="middle">primary bot（主要 bot）</text>
+<text x="240" y="84" font-size="14" fill="#555555" text-anchor="middle">講者比喻成幕僚長</text>
+<text x="252" y="130" font-size="12" fill="#555555" text-anchor="start">22:16</text>
+<rect x="110" y="150" width="260" height="48" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2.5"/>
+<text x="240" y="181" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">管 X 帳號</text>
+<rect x="110" y="212" width="260" height="48" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2.5"/>
+<text x="240" y="243" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">做工程</text>
+<rect x="110" y="274" width="260" height="48" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2.5"/>
+<text x="240" y="305" font-size="17" fill="#222222" font-weight="bold" text-anchor="middle">個人助理</text>
+<path d="M240 104 L240 148" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<text x="240" y="352" font-size="15" fill="#555555" text-anchor="middle">長期專職 bot，取人名當同事</text>
+<text x="240" y="372" font-size="12" fill="#555555" text-anchor="middle">21:08</text>
+<path d="M240 384 L240 424" stroke="#444" stroke-width="2" fill="none" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+<rect x="40" y="432" width="400" height="96" rx="8" fill="#f1f5ee" stroke="#4f8a5b" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="240" y="472" font-size="19" fill="#222222" font-weight="bold" text-anchor="middle">Cursor Cloud Agents</text>
+<text x="240" y="500" font-size="14" fill="#555555" text-anchor="middle">用完就消失；由 bot 發任務給它</text>
+<text x="432" y="450" font-size="12" fill="#555555" text-anchor="end">23:13</text>
+</svg>

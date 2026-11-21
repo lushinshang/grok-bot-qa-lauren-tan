@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 640" width="480" height="640" role="img" font-family="PingFang TC, Noto Sans TC, Microsoft JhengHei, sans-serif">
+<title>三種讓 bot 工作的方式與花費</title>
+<desc>三列由上而下。第一列 routine（定時）：依排程醒來，不管有沒有事，每次都花額度（影片 4:23）。第二列 webhook 與事件：外部服務有事才叫醒 bot，只在有事時花額度（4:37）。第三列你直接對話：你開口它才工作，你說話時才花額度。圖底註記：文件寫每小時一次的排程，一天可用掉一週的額度。</desc>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#444"/></marker></defs>
+<rect width="480" height="640" fill="#fbfaf7"/>
+<rect x="20" y="24" width="440" height="56" rx="8" fill="#ffffff" stroke="#d9822b" stroke-width="2.5"/>
+<text x="240" y="60" font-size="19" fill="#222222" font-weight="bold" text-anchor="middle">routine（定時）</text>
+<text x="240" y="40" font-size="12" fill="#555555" text-anchor="middle">4:23</text>
+<path d="M240 82 L240 98" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="20" y="100" width="440" height="40" rx="8" fill="#ffffff" stroke="#c9c8c0" stroke-width="1.5"/>
+<text x="240" y="126" font-size="16" fill="#222222" text-anchor="middle">依排程醒來，不管有沒有事</text>
+<path d="M240 142 L240 158" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="20" y="160" width="440" height="36" rx="8" fill="#d9822b" stroke="#d9822b" stroke-width="1"/>
+<text x="240" y="184" font-size="16" fill="#ffffff" font-weight="bold" text-anchor="middle">每次都花額度</text>
+<rect x="20" y="200" width="440" height="56" rx="8" fill="#ffffff" stroke="#4f8a5b" stroke-width="2.5"/>
+<text x="240" y="236" font-size="19" fill="#222222" font-weight="bold" text-anchor="middle">webhook 與事件</text>
+<text x="240" y="216" font-size="12" fill="#555555" text-anchor="middle">4:37</text>
+<path d="M240 258 L240 274" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="20" y="276" width="440" height="40" rx="8" fill="#ffffff" stroke="#c9c8c0" stroke-width="1.5"/>
+<text x="240" y="302" font-size="16" fill="#222222" text-anchor="middle">外部服務有事才叫醒 bot</text>
+<path d="M240 318 L240 334" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="20" y="336" width="440" height="36" rx="8" fill="#4f8a5b" stroke="#4f8a5b" stroke-width="1"/>
+<text x="240" y="360" font-size="16" fill="#ffffff" font-weight="bold" text-anchor="middle">只在有事時花額度</text>
+<rect x="20" y="376" width="440" height="56" rx="8" fill="#ffffff" stroke="#1f3a5f" stroke-width="2.5"/>
+<text x="240" y="412" font-size="19" fill="#222222" font-weight="bold" text-anchor="middle">你直接對話</text>
+<path d="M240 434 L240 450" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="20" y="452" width="440" height="40" rx="8" fill="#ffffff" stroke="#c9c8c0" stroke-width="1.5"/>
+<text x="240" y="478" font-size="16" fill="#222222" text-anchor="middle">你開口它才工作</text>
+<path d="M240 494 L240 510" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+<rect x="20" y="512" width="440" height="36" rx="8" fill="#1f3a5f" stroke="#1f3a5f" stroke-width="1"/>
+<text x="240" y="536" font-size="16" fill="#ffffff" font-weight="bold" text-anchor="middle">你說話時才花額度</text>
+<rect x="20" y="552" width="440" height="62" rx="8" fill="#fff7ec" stroke="#d9822b" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="240" y="578" font-size="15" fill="#222222" text-anchor="middle">文件：每小時一次的排程，一天可用掉一週的額度</text>
+</svg>
